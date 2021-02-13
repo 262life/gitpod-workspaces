@@ -1,8 +1,8 @@
 #!/bin/sh
 
-export docker_login="rsliotta"
+export docker_login=${DOCKER_LOGIN}
 
-export docker_token="f88c296f-e827-45d7-bb13-caea7f4faf01"
+export docker_token=${DOCKER_TOKEN}
 
 LATEST=false TAG=v1.0 PUBLISH=true DOCKERFILE=./Dockerfile-devops .github/scripts/init.sh gitpod-workspace-devops
 
