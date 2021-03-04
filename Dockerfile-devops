@@ -24,6 +24,7 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - \
       $(lsb_release -cs) \
       stable" \
    && apt-get -y install docker-ce \
+   && mkdir /dev/net && mknod /dev/net/tun c 10 200 \
    && rm -rf /var/lib/apt/lists/* 
 
 # Apply user-specific settings
